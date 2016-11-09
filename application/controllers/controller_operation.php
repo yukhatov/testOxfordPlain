@@ -15,6 +15,7 @@ class Controller_Operation extends Controller
 	    if($_POST)
         {
             $modelOperation = new Model_Operation();
+
             if($modelOperation->load($_POST) and $modelOperation->validate())
             {
                 if($modelOperation->save()){
