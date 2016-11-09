@@ -20,10 +20,18 @@ abstract class Model
 	}
 
     /**
-     * @param $params
+     * @param $request
+     * @return mixed
      */
-    public function get_data($params)
-	{
-		// todo
-	}
+    abstract protected function load($request);
+
+    /**
+     * @return mixed
+     */
+    abstract protected function validate();
+
+    /**
+     * @return mixed
+     */
+    abstract protected function save();
 }
